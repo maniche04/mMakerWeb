@@ -25,5 +25,20 @@ class news_source_bbc extends Seeder
             'url' => "https://www.reuters.com",
             'imageurl' => "http://photos.prnewswire.com/prnvar/20130208/MM57185LOGO?max=700"
         ]);
+
+        DB::table('news_sources')->insert([
+            'shortName' => "WSJ",
+            'fullName' => "Wall Street Journal",
+            'url' => "https://www.wsj.com",
+            'imageurl' => "http://www.adweek.com/fishbowlny/files/original/wsjmag_logo06152010.png"
+        ]);
+
+        DB::table('news_sources')->insert([
+            'shortName' => "CNN",
+            'fullName' => "CNN Business",
+            'url' => "https://www.cnn.com",
+            'imageurl' => "http://www.adweek.com/fishbowlny/files/original/wsjmag_logo06152010.png"
+        ]);
+
     }
 }
