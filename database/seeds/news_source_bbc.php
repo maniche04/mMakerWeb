@@ -37,7 +37,7 @@ class news_source_bbc extends Seeder
             'shortName' => "CNN",
             'fullName' => "CNN Business",
             'url' => "https://www.cnn.com",
-            'imageurl' => "http://www.adweek.com/fishbowlny/files/original/wsjmag_logo06152010.png"
+            'imageurl' => "http://logos-download.com/wp-content/uploads/2016/02/CNN-Travel-logo.png"
         ]);
 
     }

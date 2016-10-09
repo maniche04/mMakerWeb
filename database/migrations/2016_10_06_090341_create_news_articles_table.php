@@ -16,7 +16,7 @@ class CreateNewsArticlesTable extends Migration
         Schema::create('news_articles', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('sourceId');
-            $table->foreign('sourceId')->references('id')->on('news_sources');
+            $table->unsignedInteger('commodityId');
             $table->mediumText('title');
             $table->string('link');
             $table->dateTime('pubDate');

@@ -87,7 +87,10 @@
     </head>
     <body>
         <div ng-app="mMaker" ng-controller="newsArticleController">
-            <h1 class = 'ui medium teal header'>News Articles</h1>
+            <div class = 'ui segment'>
+                <h1 class = 'ui medium teal header'>News Articles</h1>
+            </div>
+
             <div class = 'ui search fluid input'>
                 <input type="text" placeholder="Search any article" ng-model="searchArticle">
             </div>
@@ -95,11 +98,12 @@
             <div class="row">
                 <div>
                     <table class = 'ui table'>
-                        <tr ng-click="loadArticle(article)" ng-class = "{'positive': article.score > 0, 'negative': article.score < 0}" ng-repeat='article in articles | filter:searchArticle'>
+                        <tr class = 'clickable' ng-click="loadArticle(article)" ng-class = "{'positive': article.score > 0, 'negative': article.score < 0}" ng-repeat='article in articles | filter:searchArticle'>
                             <td class = 'center aligned'><img class = 'ui mini centered image' src='<% article.source.imageurl %>'></td>
                             <td><% article.title %></td>
                             <td><% article.pubDate %></td>
-                            <td ><% article.score %></td>
+                            <td><% article.score %></td>
+                            <td><div class = 'click icon' href='<% article.link %>'></div></td>
                         </tr>
                     </table>
                 </div>
